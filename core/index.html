@@ -55,7 +55,21 @@
 
     <div class="row">
       <div class="col-md-3">
-        <video autoplay style="max-width: 100%; width: 320px;"></video>
+        <!--<video autoplay style="max-width: 100%; width: 320px;"></video>-->
+        <div class="row">
+          <video id="localVideo" autoplay style="max-width: 100%; width: 320px;"></video>
+        </div>
+
+        <div class="row">
+          <video id="remoteVideo" autoplay style="max-width: 100%; width: 320px;"></video>
+        </div>
+
+        <div class="row">
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <button id="startButton">Start</button>
+          <button id="callButton">Call</button>
+          <button id="hangupButton">Hang Up</button>
+        </div>
       </div>
       <div class="col-md-9"><div id="examplePadPlugins"></div></div>
     </div>
@@ -74,6 +88,7 @@
 
   </div>
 
+  <script src="js/lib/adapter.js"></script>
   <script src="js/main.js"></script>
   <script type="text/javascript">
       $('#examplePadPlugins').pad({
